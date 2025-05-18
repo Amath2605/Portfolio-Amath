@@ -1,0 +1,812 @@
+/* ==========================
+   VARIABLES GLOBALES (THEME)
+   ========================== */
+:root {
+    --primary-color: #6c63ff; /* Couleur principale (accent) utilisée pour les boutons, titres, éléments actifs */
+    --secondary-color: #f44336; /* Couleur secondaire pour certains accents ou messages d'alerte */
+    --dark-color: #333; /* Couleur du texte foncé par défaut */
+    --light-color: #f4f4f4; /* Couleur de fond claire du body */
+    --gray-color: #888; /* Texte secondaire, descriptions */
+    --light-gray: #e8e8e8; /* Bordures, fonds secondaires */
+    --success-color: #28a745; /* Pour les messages de succès ou actions validées */
+    --border-radius: 8px; /* Rayon de bordure standard pour les éléments arrondis */
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Ombre utilisée pour donner de la profondeur */
+    --transition: all 0.3s ease; /* Transition douce pour les effets visuels */
+    --container-width: 1200px; /* Largeur maximale du contenu centré */
+}
+
+/* =============================
+   RESET CSS + BASE TYPOGRAPHIE
+   ============================= */
+* {
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les paddings par défaut */
+    box-sizing: border-box; /* Inclut padding et bordures dans les dimensions */
+}
+
+html {
+    scroll-behavior: smooth; /* Défilement fluide lors du clic sur les liens d’ancrage */
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Police lisible et moderne */
+    line-height: 1.6; /* Hauteur de ligne confortable pour la lecture */
+    color: var(--dark-color); /* Texte en couleur foncée */
+    background-color: var(--light-color); /* Arrière-plan clair général */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600; /* Titres en semi-gras */
+    line-height: 1.3; /* Hauteur de ligne plus compacte pour les titres */
+}
+
+a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: var(--dark-color); /* Couleur par défaut des liens */
+    transition: var(--transition); /* Animation fluide au survol */
+}
+
+ul {
+    list-style: none; /* Supprime les puces des listes */
+}
+
+img {
+    max-width: 100%; /* Les images ne dépassent jamais leur conteneur */
+    height: auto; /* Hauteur proportionnelle à la largeur */
+    display: block; /* Supprime l’espace blanc en dessous des images */
+}
+
+/* =====================
+   LAYOUT PRINCIPAL
+   ===================== */
+.container {
+    width: 100%; /* Largeur pleine sur petit écran */
+    max-width: var(--container-width); /* Limite la largeur sur les grands écrans */
+    margin: 0 auto; /* Centre horizontalement */
+    padding: 0 20px; /* Espace intérieur horizontal */
+}
+
+section {
+    padding: 100px 0; /* Espacement vertical entre les sections */
+}
+
+/* =====================
+   BOUTONS RÉUTILISABLES
+   ===================== */
+.btn {
+    display: inline-block; /* Permet largeur/hauteur personnalisées */
+    padding: 12px 30px; /* Espace intérieur des boutons */
+    border-radius: var(--border-radius); /* Coins arrondis */
+    font-weight: 500; /* Texte légèrement en gras */
+    cursor: pointer; /* Curseur pointeur */
+    transition: var(--transition); /* Animation fluide */
+    text-align: center; /* Centrage du texte */
+    border: none; /* Pas de bordure par défaut */
+}
+
+.btn-primary {
+    background-color: var(--primary-color); /* Couleur de fond principale */
+    color: white; /* Texte en blanc */
+}
+
+.btn-primary:hover {
+    background-color: #5952d4; /* Teinte plus foncée au survol */
+    transform: translateY(-3px); /* Légère élévation au survol */
+}
+
+.btn-secondary {
+    background-color: transparent; /* Fond transparent */
+    color: var(--dark-color); /* Texte foncé */
+    border: 1px solid var(--dark-color); /* Bordure visible */
+}
+
+.btn-secondary:hover {
+    background-color: var(--dark-color); /* Fond foncé au survol */
+    color: white; /* Texte blanc */
+    transform: translateY(-3px); /* Légère élévation */
+}
+
+/* =====================
+   TITRES DE SECTION
+   ===================== */
+.section-header {
+    text-align: center; /* Centrage du titre */
+    margin-bottom: 60px; /* Espace sous le titre */
+}
+
+.section-header h2 {
+    font-size: 36px; /* Taille du titre principal */
+    margin-bottom: 15px; /* Espace sous le titre */
+    position: relative; /* Pour positionner le séparateur */
+    display: inline-block; /* Pour que le séparateur soit aligné au texte */
+}
+
+.separator {
+    display: block; /* Élément visible en bloc */
+    width: 80px; /* Longueur de la ligne */
+    height: 3px; /* Épaisseur de la ligne */
+    background-color: var(--primary-color); /* Couleur du séparateur */
+    margin: 15px auto; /* Centrage horizontal */
+}
+
+
+/* =====================
+   EN-TÊTE & NAVIGATION
+   ===================== */
+header {
+    position: fixed; /* Reste visible même lors du défilement */
+    top: 0;
+    left: 0;
+    width: 100%; /* Prend toute la largeur */
+    padding: 20px 0; /* Espacement vertical */
+    background-color: rgba(255, 255, 255, 0.95); /* Fond légèrement transparent */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    z-index: 1000; /* Priorité d'affichage élevée */
+    transition: var(--transition); /* Transition fluide */
+}
+
+header .container {
+    display: flex; /* Mise en ligne horizontale */
+    justify-content: space-between; /* Espace entre logo et menu */
+    align-items: center; /* Alignement vertical au centre */
+}
+
+.logo h1 {
+    font-size: 24px; /* Taille du nom/logo */
+    font-weight: 700; /* Texte en gras */
+}
+
+.logo span {
+    color: var(--primary-color); /* Mise en évidence du nom */
+}
+
+nav ul {
+    display: flex; /* Menu horizontal */
+}
+
+nav ul li {
+    margin-left: 30px; /* Espacement entre les éléments du menu */
+}
+
+nav ul li a {
+    font-size: 16px; /* Taille des liens du menu */
+    font-weight: 500; /* Texte légèrement gras */
+    position: relative; /* Permet l’effet de soulignement */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--primary-color); /* Couleur de survol ou lien actif */
+}
+
+nav ul li a::after {
+    content: ''; /* Crée une pseudo-ligne */
+    position: absolute;
+    bottom: -5px; /* Position sous le lien */
+    left: 0;
+    width: 0; /* Ligne invisible par défaut */
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition); /* Animation de la ligne */
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%; /* Affiche toute la ligne au survol */
+}
+
+.burger-menu {
+    display: none; /* Masqué par défaut sur les grands écrans */
+    cursor: pointer; /* Curseur pointeur */
+}
+
+.burger-menu .bar {
+    width: 25px; /* Largeur de chaque barre */
+    height: 3px;
+    background-color: var(--dark-color);
+    margin: 5px 0; /* Espacement vertical entre les barres */
+    transition: var(--transition); /* Animation fluide */
+}
+
+
+/* =====================
+   SECTION HÉRO (ACCUEIL)
+   ===================== */
+.hero {
+    padding: 180px 0 100px; /* Grand espacement pour laisser place au contenu principal */
+    background-color: #f9f9ff; /* Fond légèrement bleuté pour la mise en avant */
+    overflow: hidden; /* Masque les débordements (pour les formes animées) */
+    position: relative; /* Nécessaire pour positionner les éléments internes */
+}
+
+.hero .container {
+    display: flex; /* Mise en page en ligne */
+    align-items: center; /* Alignement vertical centré */
+    justify-content: space-between; /* Espace entre texte et image */
+}
+
+.hero-content {
+    flex: 1; /* Prend 50% de l’espace */
+    padding-right: 50px; /* Espacement à droite du texte */
+}
+
+.hero-content h1 {
+    font-size: 48px; /* Titre principal large */
+    line-height: 1.2; /* Hauteur de ligne plus serrée */
+    margin-bottom: 20px; /* Espacement sous le titre */
+}
+
+.hero-content h1 span {
+    color: var(--primary-color); /* Met en valeur une partie du texte */
+    display: block; /* Passe à la ligne automatiquement */
+}
+
+.hero-content p {
+    font-size: 18px; /* Texte d’introduction plus lisible */
+    color: var(--gray-color); /* Couleur douce pour le texte secondaire */
+    margin-bottom: 30px; /* Espacement sous le paragraphe */
+}
+
+.hero-buttons {
+    display: flex; /* Boutons en ligne */
+    gap: 15px; /* Espacement horizontal entre les boutons */
+}
+
+.hero-image {
+    flex: 1; /* Prend 50% de l’espace */
+    position: relative; /* Pour placer la forme animée */
+    height: 400px; /* Hauteur fixe de l’image */
+    display: flex; /* Centrage du contenu */
+    align-items: center;
+    justify-content: center;
+}
+
+.shape {
+    width: 300px;
+    height: 300px;
+    background-color: var(--primary-color); /* Couleur principale animée */
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Forme fluide organique */
+    animation: morph 8s ease-in-out infinite; /* Animation continue de morphing */
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    50% {
+        border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+    }
+    100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+}
+
+
+/* =====================
+   SECTION À PROPOS DE MOI
+   ===================== */
+.about-content {
+    display: flex; /* Mise en page en deux colonnes */
+    align-items: center; /* Alignement vertical centré */
+    gap: 50px; /* Espace entre image et texte */
+}
+
+.about-image {
+    flex: 1; /* Prend 50% de l’espace */
+}
+
+.about-text {
+    flex: 1; /* Prend également 50% */
+}
+
+.img-container {
+    position: relative; /* Pour effets supplémentaires si nécessaires */
+    max-width: 400px; /* Taille maximale de l’image */
+    border-radius: var(--border-radius); /* Coins arrondis */
+    overflow: hidden; /* Cache le débordement */
+    box-shadow: var(--box-shadow); /* Applique une ombre douce */
+}
+
+.placeholder-img {
+    background-color: #e0e0ff; /* Fond bleu clair de remplacement */
+    height: 400px; /* Hauteur fixe */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrage horizontal et vertical */
+}
+
+.placeholder-img i {
+    font-size: 80px; /* Icône grande taille */
+    color: var(--primary-color); /* Couleur principale pour l’icône */
+}
+
+.about-text h3 {
+    font-size: 28px; /* Titre de section */
+    margin-bottom: 20px; /* Espacement sous le titre */
+}
+
+.about-text p {
+    color: var(--gray-color); /* Texte secondaire */
+    margin-bottom: 20px; /* Espacement entre les paragraphes */
+}
+
+.personal-info {
+    display: grid; /* Mise en grille */
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes égales */
+    grid-gap: 15px; /* Espacement entre les éléments */
+    margin: 25px 0; /* Espacement vertical de la section */
+}
+
+.info-item {
+    display: flex; /* Texte et valeur alignés en ligne */
+}
+
+.info-title {
+    font-weight: 600; /* Titre en gras */
+    min-width: 120px; /* Largeur fixe pour l'alignement */
+}
+
+.info-value {
+    color: var(--gray-color); /* Couleur plus douce pour les valeurs */
+}
+
+/* =====================
+   SECTION PROJETS
+   ===================== */
+.projects {
+    background-color: #f9f9ff; /* Fond clair pour démarquer la section */
+}
+
+.projects-filter {
+    display: flex; /* Affiche les filtres en ligne */
+    justify-content: center; /* Centre les boutons de filtre */
+    flex-wrap: wrap; /* Permet de passer à la ligne sur petit écran */
+    margin-bottom: 40px; /* Espacement sous les filtres */
+    gap: 10px; /* Espacement entre les boutons */
+}
+
+.filter-btn {
+    padding: 8px 20px; /* Taille intérieure des boutons */
+    background: transparent; /* Fond transparent par défaut */
+    border: 1px solid var(--light-gray); /* Bordure claire */
+    border-radius: 30px; /* Coins bien arrondis */
+    cursor: pointer; /* Curseur en main au survol */
+    font-size: 14px; /* Taille du texte */
+    transition: var(--transition); /* Animation fluide */
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--primary-color); /* Fond violet pour les boutons actifs ou survolés */
+    color: white; /* Texte blanc */
+    border-color: var(--primary-color); /* Bordure violette */
+}
+
+.projects-grid {
+    display: grid; /* Mise en grille des projets */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Colonnes automatiques responsives */
+    grid-gap: 30px; /* Espacement entre les cartes */
+}
+
+.project-card {
+    background-color: white; /* Fond blanc des cartes */
+    border-radius: var(--border-radius); /* Coins arrondis */
+    overflow: hidden; /* Cache les débordements d’image */
+    box-shadow: var(--box-shadow); /* Ombre pour l’effet de carte */
+    transition: var(--transition); /* Animation fluide au survol */
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Légère élévation au survol */
+}
+
+.project-img {
+    height: 200px; /* Hauteur fixe des images */
+    overflow: hidden; /* Cache les débordements */
+}
+
+.project-img .placeholder-img {
+    height: 200px; /* Assure une hauteur uniforme avec le style par défaut */
+}
+
+.project-info {
+    padding: 25px; /* Espacement interne de la carte */
+}
+
+.project-info h3 {
+    margin-bottom: 10px; /* Espace sous le titre */
+    font-size: 20px; /* Taille du titre */
+}
+
+.project-info p {
+    color: var(--gray-color); /* Texte descriptif gris */
+    margin-bottom: 15px; /* Espace sous le paragraphe */
+    font-size: 14px; /* Texte plus petit pour les descriptions */
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap; /* Les tags passent à la ligne si nécessaire */
+    gap: 8px; /* Espacement entre tags */
+    margin-bottom: 15px; /* Espace sous les tags */
+}
+
+.project-tags span {
+    background-color: #f1f1ff; /* Fond pâle pour les tags */
+    color: var(--primary-color); /* Texte violet */
+    padding: 5px 12px; /* Espacement interne */
+    border-radius: 20px; /* Capsules arrondies */
+    font-size: 12px; /* Petite taille pour les tags */
+}
+
+.project-link {
+    display: inline-flex; /* Permet l’alignement horizontal */
+    align-items: center; /* Aligne l’icône et le texte verticalement */
+    color: var(--primary-color); /* Texte violet */
+    font-weight: 500; /* Texte semi-gras */
+    font-size: 14px; /* Taille du texte */
+    gap: 5px; /* Espacement entre texte et icône */
+}
+
+.project-link i {
+    transition: var(--transition); /* Animation sur l’icône */
+}
+
+.project-link:hover i {
+    transform: translateX(5px); /* Légère translation vers la droite au survol */
+}
+
+
+/* =====================
+   SECTION COMPÉTENCES
+   ===================== */
+.skills-content {
+    display: flex; /* Deux colonnes : compétences techniques et outils */
+    gap: 50px; /* Espace entre les deux blocs */
+}
+
+.skills-left, .skills-right {
+    flex: 1; /* Chaque côté prend 50% */
+}
+
+.skills-left h3, .skills-right h3 {
+    margin-bottom: 30px; /* Espacement sous le titre */
+    font-size: 24px; /* Taille des sous-titres */
+}
+
+.skill-item {
+    margin-bottom: 25px; /* Espacement entre chaque compétence */
+}
+
+.skill-info {
+    display: flex; /* Alignement horizontal nom + % */
+    justify-content: space-between; /* Espace entre nom de la compétence et le pourcentage */
+    margin-bottom: 10px; /* Espace sous le titre */
+}
+
+.skill-info p {
+    font-weight: 500; /* Texte plus lisible */
+}
+
+.skill-bar {
+    height: 8px; /* Épaisseur de la barre de progression */
+    background-color: var(--light-gray); /* Fond de la barre */
+    border-radius: 10px; /* Coins arrondis */
+    overflow: hidden; /* Cache les débordements du progrès */
+}
+
+.skill-progress {
+    height: 100%; /* Remplit verticalement la barre */
+    background-color: var(--primary-color); /* Couleur de progression */
+    border-radius: 10px; /* Arrondis cohérents */
+    transition: width 1.5s ease; /* Animation lors du remplissage */
+}
+
+.tools-grid {
+    display: grid; /* Disposition en grille pour les outils */
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes */
+    grid-gap: 20px; /* Espacement entre les outils */
+}
+
+.tool-item {
+    text-align: center; /* Centre le contenu dans chaque bloc */
+    padding: 20px; /* Espacement interne */
+    background-color: white; /* Fond blanc pour contraste */
+    border-radius: var(--border-radius); /* Coins arrondis */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Ombre douce */
+    transition: var(--transition); /* Effet d’animation */
+}
+
+.tool-item:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+}
+
+.tool-icon {
+    font-size: 36px; /* Taille de l’icône */
+    color: var(--primary-color); /* Couleur principale */
+    margin-bottom: 10px; /* Espace sous l’icône */
+}
+
+.contact {
+    background-color: #f9f9ff; /* Fond clair pour démarquer la section */
+}
+
+.contact-content {
+    display: flex; /* Deux colonnes : infos + formulaire */
+    gap: 50px; /* Espace entre les deux blocs */
+}
+
+.contact-info {
+    flex: 1; /* Prend 50% de l’espace */
+}
+
+.contact-form {
+    flex: 1; /* Prend l'autre moitié */
+}
+
+.contact-item {
+    display: flex; /* Aligne icône et texte */
+    align-items: flex-start; /* Aligne le haut de l’icône et du texte */
+    margin-bottom: 30px; /* Espacement entre les blocs */
+}
+
+.contact-icon {
+    width: 60px; /* Taille du cercle d’icône */
+    height: 60px;
+    background-color: white; /* Fond blanc de l’icône */
+    border-radius: 50%; /* Cercle parfait */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centre l’icône */
+    margin-right: 20px; /* Espace entre icône et texte */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Ombre douce */
+}
+
+.contact-icon i {
+    font-size: 24px; /* Taille de l’icône */
+    color: var(--primary-color); /* Couleur de l’icône */
+}
+
+.contact-details h3 {
+    margin-bottom: 5px; /* Espace sous le titre */
+    font-size: 18px; /* Taille du sous-titre */
+}
+
+.contact-details p {
+    color: var(--gray-color); /* Texte secondaire */
+}
+
+.social-links {
+    display: flex; /* Icônes en ligne */
+    gap: 15px; /* Espace entre les icônes */
+    margin-top: 30px; /* Espace au-dessus des réseaux */
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 50%; /* Forme ronde */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 18px;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Légère ombre */
+}
+
+.social-link:hover {
+    background-color: var(--primary-color); /* Fond violet au survol */
+    color: white; /* Texte blanc */
+    transform: translateY(-5px); /* Légère élévation */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Espacement entre les champs */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px; /* Espace intérieur */
+    border: 1px solid var(--light-gray); /* Bordure grise claire */
+    border-radius: var(--border-radius); /* Coins arrondis */
+    background-color: white; /* Fond blanc */
+    transition: var(--transition); /* Animation fluide */
+    font-family: inherit; /* Hérite de la police globale */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none; /* Supprime la bordure bleue */
+    border-color: var(--primary-color); /* Bordure violette au focus */
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2); /* Effet focus doux */
+}
+
+.form-group textarea {
+    resize: vertical; /* L'utilisateur peut agrandir verticalement */
+    min-height: 150px; /* Hauteur minimale confortable */
+}
+
+
+/* =====================
+   SECTION FOOTER
+   ===================== */
+footer {
+    background-color: #2d2b5f; /* Couleur de fond sombre du pied de page */
+    color: white; /* Couleur du texte en blanc */
+    padding: 50px 0 30px; /* Espacement haut et bas */
+}
+
+.footer-content {
+    display: flex; /* Mise en colonne verticale */
+    flex-direction: column;
+    align-items: center; /* Centre le contenu horizontalement */
+    text-align: center; /* Centre le texte */
+}
+
+.footer-logo h2 {
+    font-size: 30px; /* Taille du logo */
+    margin-bottom: 20px; /* Espace sous le logo */
+}
+
+.footer-logo span {
+    color: var(--primary-color); /* Accentuation avec la couleur principale */
+}
+
+.copyright {
+    margin: 20px 0; /* Espacement vertical */
+    color: rgba(255, 255, 255, 0.7); /* Texte en blanc semi-transparent */
+}
+
+.footer-links {
+    display: flex; /* Liens en ligne */
+    gap: 20px; /* Espacement entre les liens */
+    margin-top: 20px; /* Espace au-dessus des liens */
+}
+
+.footer-links a {
+    color: white; /* Couleur par défaut des liens */
+}
+
+.footer-links a:hover {
+    color: var(--primary-color); /* Couleur au survol */
+}
+
+/* =====================
+   RESPONSIVE DESIGN
+   ===================== */
+@media (max-width: 992px) {
+    section {
+        padding: 70px 0; /* Réduction du padding vertical */
+    }
+
+    .hero {
+        padding: 150px 0 70px; /* Moins de hauteur sur petits écrans */
+    }
+
+    .hero-content h1 {
+        font-size: 40px; /* Titre réduit */
+    }
+
+    .about-content,
+    .skills-content,
+    .contact-content {
+        flex-direction: column; /* Empile les colonnes */
+        gap: 50px; /* Espace entre les blocs */
+    }
+
+    .about-image {
+        order: 1; /* Affiche l’image avant le texte */
+    }
+
+    .about-text {
+        order: 2; /* Affiche le texte après l’image */
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adaptation des colonnes */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero .container {
+        flex-direction: column; /* Empile l’image et le texte */
+        text-align: center; /* Centrage du texte */
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 50px; /* Espacement sous le texte */
+    }
+
+    .hero-buttons {
+        justify-content: center; /* Centre les boutons */
+    }
+
+    .personal-info {
+        grid-template-columns: 1fr; /* Colonne unique pour les infos perso */
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour les outils */
+    }
+
+    .burger-menu {
+        display: block; /* Affiche le menu burger */
+    }
+
+    nav {
+        position: fixed;
+        top: 80px;
+        left: -100%; /* Masqué hors écran */
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+    }
+
+    nav.active {
+        left: 0; /* Affiche le menu burger */
+    }
+
+    nav ul {
+        flex-direction: column; /* Liens en colonne */
+        padding: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Espace entre les liens */
+    }
+
+    .burger-menu.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px); /* Animation croix */
+    }
+
+    .burger-menu.active .bar:nth-child(2) {
+        opacity: 0; /* Cache la barre centrale */
+    }
+
+    .burger-menu.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px); /* Animation croix */
+    }
+}
+
+@media (max-width: 576px) {
+    .section-header h2 {
+        font-size: 30px; /* Réduction du titre */
+    }
+
+    .hero-content h1 {
+        font-size: 32px; /* Titre réduit */
+    }
+
+    .hero-content p {
+        font-size: 16px; /* Texte d’intro réduit */
+    }
+
+    .about-text h3,
+    .skills-left h3,
+    .skills-right h3 {
+        font-size: 22px; /* Sous-titres plus petits */
+    }
+
+    .tools-grid {
+        grid-template-columns: 1fr; /* Une seule colonne pour les outils */
+    }
+
+    .projects-filter {
+        flex-direction: column; /* Filtres empilés */
+        align-items: center;
+    }
+
+    .filter-btn {
+        width: 100%;
+        max-width: 200px; /* Largeur max des filtres */
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Une seule colonne de projet */
+    }
+}
