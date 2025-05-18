@@ -17,8 +17,8 @@ Footer avec liens de navigation et copyright
 
 Un fichier styles.css avec :
 
-Styles modernes et élégants adaptés à un portfolio de designer
-Design responsive qui s'adapte à tous les appareils
+Styles modernes et élégants adaptés à un portfolio de reférent 
+digital responsive qui s'adapte à tous les appareils
 Animations et transitions subtiles pour une expérience utilisateur améliorée
 Système de couleurs cohérent et harmonieux
 
