@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Designer | Créatif & Innovant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Mon<span>Portfolio</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#accueil" class="active">Accueil</a></li>
+                    <li><a href="#a-propos">À propos</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#competences">Compétences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="burger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bonjour, je suis <span>Réferent Digital</span></h1>
+                <p>Je transforme des idées en solutions digitales innovantes et impactantes.</p>
+                <div class="hero-buttons">
+                    <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="shape"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="a-propos" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>À propos de moi</h2>
+                <div class="separator"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="img-container">
+                        <!-- Remplacer par votre image -->
+                        <div class="placeholder-img">
+                            <i><img src="DSC09974.jpg" alt="Description de votre image"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Référent Digital en Formation</h3>
+                    <p>Je suis un référent digital en cours de formation, basé à Dakar, passionné par la transformation numérique et la gestion de projets digitaux.</p>
+                    <p>Mon approche combine créativité et compétences techniques pour concevoir des solutions digitales innovantes, en alignement avec les besoins des utilisateurs et les objectifs stratégiques.</p>
+                    <div class="personal-info">
+                        <div class="info-item">
+                            <span class="info-title">Nom:</span>
+                            <span class="info-value">ElHadji Amath Sy Diatta</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-title">Email:</span>
+                            <span class="info-value">amadoudiatta734@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-title">Téléphone:</span>
+                            <span class="info-value">+221771257330</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-title">Localisation:</span>
+                            <span class="info-value">Dakar, Sénégal</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">Télécharger CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mes Projets</h2>
+                <div class="separator"></div>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="web">Design UI/UX</button>
+                <button class="filter-btn" data-filter="graphic">Design Graphique</button>
+                <button class="filter-btn" data-filter="ui">Développement web</button>
+                <button class="filter-btn" data-filter="#">Community management</button>
+                <button class="filter-btn" data-filter="#">Gestion de projet</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="web">
+                    <div class="project-img">
+                        <div class="placeholder-img">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Refonte Site E-commerce</h3>
+                        <p>Design web responsive pour une boutique de mode locale</p>
+                        <div class="project-tags">
+                            <span>Web Design</span>
+                            <span>Responsive</span>
+                        </div>
+                        <a href="#" class="project-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="graphic">
+                    <div class="project-img">
+                        <div class="placeholder-img">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Identité Visuelle de Lekki</h3>
+                        <p>Logo et charte graphique pour une application de pharmacie mobile.</p>
+                        <div class="project-tags">
+                            <span>image de marque</span>
+                            <span>création graphique</span>
+                        </div>
+                        <a href="#" class="project-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ui">
+                    <div class="project-img">
+                        <div class="placeholder-img">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Application Mobile Fitness</h3>
+                        <p>Design UI/UX pour une application de suivi d'entraînement</p>
+                        <div class="project-tags">
+                            <span>UI Design</span>
+                            <span>Mobile</span>
+                        </div>
+                        <a href="#" class="project-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ui">
+                    <div class="project-img">
+                        <div class="placeholder-img">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Plateforme Éducative</h3>
+                        <p>Design et prototypage d'une plateforme d'apprentissage en ligne nommée Sagesse Digital</p>
+                        <div class="project-tags">
+                            <span>UX Design</span>
+                            <span>Prototypage</span>
+                        </div>
+                        <a href="#" class="project-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                 <div class="project-card" data-category="web ui">
+                    <div class="project-img">
+                        <div class="placeholder-img">
+                           <i class="fas fa-file-image"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Kakemono de Ndema</h3>
+                        <p>Conception graphique d'un kakemono pour Ndema, alliant créativité visuelle et message percutant.</p>
+                        <div class="project-tags">
+                            <span>Conception</span>
+                            <span>Charte graphique</span>
+                        </div>
+                        <a href="#" class="project-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mes Compétences</h2>
+                <div class="separator"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skills-left">
+                    <h3>Compétences de réferent digital</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <p>UI/UX Design</p>
+                            <p>90%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <p>Design Graphique</p>
+                            <p>95%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <p>Integration web</p>
+                            <p>80%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <p>Community management</p>
+                            <p>75%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-right">
+                    <h3>Outils Maîtrisés</h3>
+                    <div class="tools-grid">
+                        <div class="tool-item">
+                            <div class="tool-icon">
+                                <i class="fab fa-figma"></i>
+                            </div>
+                            <p>Figma</p>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <p>Indesign</p>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-icon">
+                               <i class="fas fa-bezier-curve"></i>
+                            </div>
+                            <p>Illustrator</p>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-icon">
+                                <i class="fab fa-trello"></i>
+                            </div>
+                            <p>Trello</p>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-icon">
+                                <i class="fas fa-pen-nib"></i>
+                            </div>
+                            <p>XD</p>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-icon">
+                               <i class="fas fa-code"></i>
+                            </div>
+                            <p>Vs code</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contactez-moi</h2>
+                <div class="separator"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Adresse</h3>
+                            <p>Dakar, Sénégal</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>amadoudiatta734@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Téléphone</h3>
+                            <p>+221 77 125 73 30</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Sujet">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Mon<span>Portfolio</span></h2>
+                </div>
+                <p class="copyright">© 2025 Tous droits réservés | Créé ElHadji Amath Sy Diatta</p>
+                <div class="footer-links">
+                    <a href="#accueil">Accueil</a>
+                    <a href="#a-propos">À propos</a>
+                    <a href="#projets">Projets</a>
+                    <a href="#competences">Compétences</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile
+        const burgerMenu = document.querySelector('.burger-menu');
+        const nav = document.querySelector('nav');
+        
+        burgerMenu.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            burgerMenu.classList.toggle('active');
+        });
+
+        // Navigation active lors du défilement
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Filtrage des projets
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Activer le bouton cliqué
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                
+                projectCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const categories = card.dataset.category.split(' ');
+                        if (categories.includes(filter)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+<!--Structure du projet
+Le portfolio comprend :
+
+Un fichier index.html avec les sections suivantes :
+
+Header avec menu de navigation
+Section Accueil (hero section)
+Section À propos de moi
+Section Projets avec système de filtrage
+Section Compétences avec barres de progression
+Section Contact avec formulaire
+Footer avec liens de navigation et copyright
+
+
+Un fichier styles.css avec :
+
+Styles modernes et élégants adaptés à un portfolio de designer
+Design responsive qui s'adapte à tous les appareils
+Animations et transitions subtiles pour une expérience utilisateur améliorée
+Système de couleurs cohérent et harmonieux
+
+
+
+Caractéristiques principales
+
+Design moderne : Interface épurée avec des couleurs attrayantes
+Responsive : S'adapte parfaitement aux mobiles, tablettes et ordinateurs
+Interactif : Système de filtrage pour les projets, barres de compétences animées
+Animation : Effets de survol, forme animée sur la page d'accueil
+Menu mobile : Burger menu pour les appareils mobiles
+
+Personnalisation
+Pour personnaliser ce portfolio :
+
+Remplacez les textes "placeholder" par vos informations personnelles
+Ajoutez vos propres photos de projets (actuellement des icônes placeholder)
+Mettez à jour les compétences et outils avec ceux que vous maîtrisez
+Ajustez les couleurs en modifiant les variables CSS au début du fichier styles.css
+
+Ce portfolio est prêt à être utilisé et répond à toutes les exigences de l'activité pratique 4.5 de Simplon Sénégal.-->
