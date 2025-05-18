@@ -31,12 +31,3 @@ Responsive : S'adapte parfaitement aux mobiles, tablettes et ordinateurs
 Interactif : Système de filtrage pour les projets, barres de compétences animées
 Animation : Effets de survol, forme animée sur la page d'accueil
 Menu mobile : Burger menu pour les appareils mobiles
-
-Personnalisation
-Pour personnaliser ce portfolio :
-
-Remplacez les textes "placeholder" par vos informations personnelles
-Ajoutez vos propres photos de projets (actuellement des icônes placeholder)
-Mettez à jour les compétences et outils avec ceux que vous maîtrisez
-Ajustez les couleurs en modifiant les variables CSS au début du fichier styles.css
-
